@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+        <title>Student Registration Form</title>
+   </head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background: green;
+}
+
+input[type="reset"] {
+    background: red;
+}
+
+input[type="submit"]:hover {
+    background: darkgreen;
+}
+
+input[type="reset"]:hover {
+    background: darkred;
+}
+</style>
+<script>
+
+function validateForm() {
+
+    // Get values
+    let fname = document.getElementById("fname").value;
+    let lname = document.getElementById("lname").value;
+    let roll = document.getElementById("roll").value;
+let roll = document.getElementById("rno").value;
+
+    let email = document.getElementById("email").value;
+
+        // First Name Validation
+    if (fname == ""||lname=="") 
+{
+       alert("enter the fields");
+
+    } 
+        // Roll Number Validation
+    if (roll == "") {
+      alert("enter the field");  }
+
+   
+    if (email == ""||!emial.contains('@')
+ {
+alert("enter valid email");
+          }
+   alert("Student Registration Successful!");
+    }
+
+    return valid;
+}
+</script>
+
+
+
+
+
+    <form onsubmit="return validateForm()">
+    <h2>Student Registration Form</h2>
+  
+      <label>First Name</label>
+        <input type="text" id="fname" placeholder="Enter First Name">
+              
+           <label>Last Name</label>
+        <input type="text" id="lname" placeholder="Enter Last Name">
+       
+        <label>Roll Number</label>
+        <input type="text" id="roll" placeholder="Enter Roll Number">
+       
+          <label> Mobile Number</label>
+        <input type="text" id="mobile" placeholder="Enter Roll Number">
+
+  
+
+        
+
+       <label>Email</label>
+        <input type="text" id="email" placeholder="Enter Email">
+       
+
+       
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+       
+
+    </form>
+
+
+
+</body>
+</html>
